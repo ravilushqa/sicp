@@ -10,9 +10,9 @@
 (define (sum-of-squares x y)
   (+ (square x) (square y)))
 
-(define (solution x y z)
+(define (sum-of-squares-two-bigest-numbers x y z)
   (cond((and(>= y x) (>= z x)) (sum-of-squares y z))
        ((and(>= x y) (>= z y)) (sum-of-squares x z))
        ((and(>= x z) (>= y z)) (sum-of-squares x y))))
 
-(check-equal? (solution 5 2 2) 29)
+(check-equal? (sum-of-squares-two-bigest-numbers 5 2 2) 29)
